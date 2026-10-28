@@ -1,0 +1,437 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { overflow-x: hidden; }
+body { min-width: 320px; overflow-wrap: break-word; }
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.modoclaro {
+    background-color: white;
+    color: black;
+}
+
+#Maquetado {
+    display: grid;
+    grid:
+      ". Header ." auto
+      ". Contenido ." auto
+      "Footer Footer Footer" auto
+      / auto 67% auto;
+  }
+#Header { grid-area: Header; }
+#Contenido { grid-area: Contenido;
+padding: 36px 36px 36px 36px;
+background-color: #171717; }
+#Footer { grid-area: Footer; }
+
+#ImHeader {
+    position: relative;
+    left: 25%;
+    width: 50%;
+}
+
+#Logo {
+    position: relative;
+    right: 50%;
+    height: 350;
+    width: 350;
+    max-height: 100px;
+    max-width: 250px;
+    width: auto;
+}
+
+video {
+    position: relative;
+    left: 14%;
+    height: 30%;
+}
+
+a {
+    color: aqua;
+}
+
+hr {
+    border: 1px solid grey;
+}
+
+#tablapersonajes {
+    float: right;
+    margin-left: 100px;
+    margin-bottom: 70px;
+    border: 1px solid tomato;
+}
+
+ol * {
+    color: white;
+    text-decoration: none;
+}
+
+/* Personajes */
+.layout {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.layout a :hover {
+    transform: scale(1.1);
+    transition: transform 0.3 ease;
+}
+
+/* Footer */
+#Logo3 {
+    position: relative;
+    left: 42%;
+    top: 30px;
+    padding: 10px;
+    max-height: 300px;
+    max-width: 250px;
+    width: auto;
+}
+
+#Logo4 {
+    position: relative;
+    left: 53%;
+    top: -70px;
+    padding: 10px;
+    max-height: 300px;
+    max-width: 250px;
+    width: auto;
+}
+
+#Signalis {
+    position: relative;
+    left: 10px;
+    bottom: 30px;
+}
+
+#icons {
+    position: relative;
+    left: 44%;
+    top: -40px;
+}
+
+#facebook {
+    position: relative;
+    top: 20%;
+}
+
+#twitter {
+    position: relative;
+    top: 20%;
+}
+
+#discord {
+    position: relative;
+    top: 20%;
+}
+
+#youtube {
+    position: relative;
+    top: 20%;
+}
+
+#steam {
+    position: relative;
+    top: 20%;
+}
+
+/* Menú cabezera */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    font-weight: bold;
+    font-size: 12px;
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #252525;
+}
+
+#SHeader {
+    position: relative;
+    left: 9%;
+    top: -22%;
+}
+
+/* Ajustes de maquetación y pie de página */
+#Maquetado {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "Header"
+        "Contenido"
+        "Footer";
+    width: 100%;
+}
+
+#Header, #Contenido, #Footer {
+    min-width: 0;
+    width: 100%;
+}
+
+#Contenido {
+    grid-area: Contenido;
+    padding: clamp(18px, 4vw, 40px);
+    background-color: #171717;
+    line-height: 1.65;
+}
+
+#Header {
+    grid-area: Header;
+    position: relative;
+    overflow: hidden;
+}
+
+#ImHeader {
+    display: block;
+    position: static;
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+}
+
+#Logo {
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    right: auto;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    max-width: min(42vw, 250px);
+    max-height: 100px;
+    object-fit: contain;
+}
+
+#SHeader {
+    position: static;
+    padding: 12px 16px;
+    text-align: center;
+    background: #101010;
+}
+
+#SHeader p {
+    margin-bottom: 8px;
+    letter-spacing: .18em;
+}
+
+#SHeader ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+#SHeader li {
+    float: none;
+}
+
+#SHeader li a {
+    padding: 12px 14px;
+}
+
+video {
+    display: block;
+    position: static;
+    width: min(100%, 800px);
+    height: auto;
+    margin: 0 auto;
+}
+
+#Footer {
+    grid-area: Footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 24px 16px;
+    background: #090909;
+    text-align: center;
+}
+
+#Logo3, #Logo4 {
+    display: none;
+}
+
+#icons {
+    position: static;
+    left: auto;
+    top: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.credit {
+    margin: 0;
+    color: #ddd;
+    font-size: .95rem;
+}
+
+.credit strong {
+    color: #fff;
+}
+
+a {
+    color: #8fe9f0;
+    text-underline-offset: 3px;
+}
+
+a:hover, a:focus-visible {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    #Contenido {
+        padding: 18px 16px;
+    }
+
+    #SHeader ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #SHeader li a {
+        display: block;
+        padding: 10px;
+    }
+
+    #tablapersonajes {
+        float: none;
+        max-width: 100%;
+        margin: 16px 0;
+    }
+
+    .layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+}
+
+
+/* Selector de idioma */
+.language-toggle { position: absolute; top: 12px; right: 16px; z-index: 20; padding: 8px 13px; border: 1px solid #b9b9b9; border-radius: 3px; background: #202020; color: #fff; cursor: pointer; font-weight: bold; }
+.language-toggle:hover, .language-toggle:focus { background: #7d1c25; }
+#SHeader { position: relative; }
+
+
+/* ===== Estilo oscuro, animaciones y accesibilidad ===== */
+:root {
+    color-scheme: dark;
+    --fondo-principal: #292929;
+    --fondo-secundario: #202020;
+    --fondo-panel: #333333;
+    --texto-principal: #ffffff;
+    --rojo-interaccion: #ff303b;
+    --borde-suave: #555555;
+}
+html { background: var(--fondo-principal); scroll-behavior: smooth; }
+body {
+    background: var(--fondo-principal) !important;
+    color: var(--texto-principal) !important;
+    animation: aparecer 650ms ease both;
+}
+#Maquetado, #Contenido, #SHeader, #Footer, #tablapersonajes, table, blockquote {
+    background-color: var(--fondo-principal) !important;
+    color: var(--texto-principal) !important;
+}
+#SHeader, #Footer { background-color: #202020 !important; }
+p, li, td, th, h1, h2, h3, h4, h5, h6, label, b, strong, em, blockquote, figcaption {
+    color: var(--texto-principal);
+    transition: color 180ms ease, text-shadow 180ms ease;
+}
+a, a:visited, #SHeader li a, #Contenido li a {
+    color: #ffffff !important;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+a:hover, a:focus-visible, #SHeader li a:hover, #Contenido li a:hover,
+#SHeader li a:focus-visible, #Contenido li a:focus-visible {
+    color: var(--rojo-interaccion) !important;
+    text-shadow: 0 0 10px rgba(255, 48, 59, .25);
+}
+button, input, select, textarea { font: inherit; }
+.language-toggle {
+    position: fixed !important;
+    top: 12px !important;
+    left: 12px !important;
+    right: auto !important;
+    z-index: 9999 !important;
+    padding: 10px 16px !important;
+    border: 1px solid #777 !important;
+    border-radius: 5px !important;
+    background: #181818 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 18px rgba(0,0,0,.35);
+    cursor: pointer;
+    animation: deslizar 500ms ease both;
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease !important;
+}
+.language-toggle:hover, .language-toggle:focus-visible {
+    background: #3a171a !important;
+    border-color: var(--rojo-interaccion) !important;
+    color: var(--rojo-interaccion) !important;
+    transform: translateY(-2px);
+}
+#SHeader { padding-top: 18px; }
+#SHeader li a:hover { transform: translateY(-2px); }
+img, video, table, blockquote, #Contenido > h1, #Contenido > h2 {
+    animation: subirSuave 700ms ease both;
+}
+img { transition: filter 250ms ease, transform 250ms ease; }
+#Contenido img:hover { filter: contrast(1.05); transform: scale(1.015); }
+#Contenido { animation: aparecer 700ms ease both; }
+#Footer { animation: aparecer 850ms ease both; }
+hr { border: 0; border-top: 1px solid #666; }
+::selection { background: #a71925; color: #fff; }
+@keyframes aparecer { from { opacity: 0; } to { opacity: 1; } }
+@keyframes deslizar { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes subirSuave { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+@media (max-width: 600px) {
+    .language-toggle { top: 8px !important; left: 8px !important; padding: 8px 12px !important; }
+    #Logo { top: 52px; }
+}
+
+
+/* Personajes: tarjetas y fichas en español */
+.section-title { text-align:center; margin: 1.2rem 0; color:#fff; }
+.personajes-intro { text-align:center; max-width:760px; margin:0 auto 2rem; line-height:1.7; }
+.character-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; max-width:1100px; margin:0 auto 2rem; padding:1rem; }
+.character-card { display:block; color:#fff; text-decoration:none; background:#292929; border:1px solid #4a4a4a; border-radius:12px; padding:1rem; text-align:center; transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease,color .25s ease; }
+.character-card img { width:100%; height:300px; object-fit:contain; display:block; margin:0 auto .8rem; border-radius:8px; }
+.character-card h2 { margin:.7rem 0; }
+.character-card p { line-height:1.6; }
+.character-card:hover,.character-card:focus-visible { color:#ff303b; border-color:#ff303b; transform:translateY(-6px); box-shadow:0 10px 26px #0008; }
+.character-profile { display:flex; align-items:center; justify-content:center; gap:2rem; max-width:900px; margin:1rem auto 2rem; padding:1rem; background:#292929; border-radius:12px; }
+.character-profile img { width:min(38%,300px); max-height:390px; object-fit:contain; }
+.character-profile p { line-height:1.7; }
+#Contenido h2 { margin-top:1.5rem; }
+#Contenido > p { line-height:1.8; margin:.8rem 0; }
+.spoiler-note { border-left:3px solid #ff303b; padding:.6rem 1rem; background:#292929; }
+@media(max-width:600px) { .character-profile { flex-direction:column; text-align:left; } .character-profile img { width:min(80%,300px); } .character-card img { height:240px; } }
